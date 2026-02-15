@@ -1,17 +1,6 @@
 import sys
 import os
 
-# === AGGRESSIVE ISOLATION BYPASS (V3) ===
-# This kills the conflict with the old 'fpdf' library by completely 
-# purging sys.modules and force-prioritizing the local folder.
-current_dir = os.path.dirname(os.path.abspath(__file__))
-if current_dir not in sys.path:
-    sys.path.insert(0, current_dir)
-
-# Purge any existing fpdf/PIL references BEFORE imports
-for m in list(sys.modules.keys()):
-    if 'fpdf' in m.lower() or 'pil' in m.lower():
-        del sys.modules[m]
 
 import streamlit as st
 from openai import OpenAI
