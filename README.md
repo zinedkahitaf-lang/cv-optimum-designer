@@ -25,7 +25,7 @@ Bu proje, **İş Güvenliği Uzmanı Fatih AKDENİZ** tarafından geliştirilmi�
 ### Yerel Çalıştırma:
 1. Depoyu klonlayın: `git clone https://github.com/kullaniciadi/ai-cv-optimizer.git`
 2. Gereksinimleri yükleyin: `pip install -r requirements.txt`
-3. Uygulamayı başlatın: `streamlit run cv_optimizer_app.py`
+3. Uygulamayı başlatın: `streamlit run streamlit_app.py`
 
 ### Streamlit Cloud:
 Uygulamayı Streamlit Cloud üzerinden doğrudan yayına almak için OpenAI API Anahtarınızı `Secrets` kısmına `OPENAI_API_KEY` adıyla eklemeniz yeterlidir.
