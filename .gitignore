@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Local libraries (installed for isolation)
+fpdf/
+fpdf2-*/
+PIL/
+pillow-*/
+fontTools/
+fonttools-*/
+defusedxml/
+defusedxml-*/
+bin/
+share/
+
+# App Specific
+.streamlit/
+.env
+
+# Antigravity/Gemini
+.gemini/
+brain/
+logs/
+.system_generated/
+requirements.txt.bak
+
+# OS
+.DS_Store
+Thumbs.db

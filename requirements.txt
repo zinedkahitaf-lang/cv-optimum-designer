@@ -1,0 +1,4 @@
+streamlit==1.32.0
+openai==1.12.0
+fpdf2==2.8.1
+Pillow==10.4.0
