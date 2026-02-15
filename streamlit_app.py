@@ -14,7 +14,7 @@ for m in list(sys.modules.keys()):
         del sys.modules[m]
 
 import streamlit as st
-import openai
+from openai import OpenAI
 import json
 import io
 import base64
@@ -116,7 +116,7 @@ if not api_key:
             st.warning("Devam etmek için API anahtarı giriniz.")
             st.stop()
 
-openai.api_key = api_key
+client = OpenAI(api_key=api_key)
 
 # === SIDEBAR: PHOTO & JOB ===
 with st.sidebar:
@@ -191,7 +191,7 @@ if prompt := st.chat_input("Kendini bana anlat..."):
         """
         
         try:
-            response = openai.chat.completions.create(
+            response = client.chat.completions.create(
                 model="gpt-4o",
                 messages=[
                     {"role": "system", "content": system_msg},
@@ -632,7 +632,7 @@ if st.button("✨ CV'mi Hemen Oluştur (Draft)"):
     """
     
     try:
-        final_gen = openai.chat.completions.create(
+        final_gen = client.chat.completions.create(
             model="gpt-4o",
             messages=[{"role": "user", "content": synth_prompt}],
             response_format={ "type": "json_object" }
